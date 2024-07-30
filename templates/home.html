@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Management System</title>
+</head>
+<body>
+    <h1>Welcome to Pet Management System</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('list_owners') }}">List Owners</a></li>
+            <li><a href="{{ url_for('add_owner') }}">Add Owner</a></li>
+            <li><a href="{{ url_for('list_pets') }}">List Pets</a></li>
+            <li><a href="{{ url_for('add_pet') }}">Add Pet</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

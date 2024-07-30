@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Owners</title>
+</head>
+<body>
+    <h1>Owners</h1>
+    <ul>
+    {% for owner in owners %}
+        <li>{{ owner }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services</title>
+</head>
+<body>
+    <h1>Services</h1>
+    <h2>Available Pets for Services:</h2>
+    <ul>
+    {% for pet in pets %}
+        <li>{{ pet }} - Available for services</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

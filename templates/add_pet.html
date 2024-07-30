@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Pet</title>
+</head>
+<body>
+    <h1>Add Pet</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="species">Species:</label>
+        <select id="species" name="species" required>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+        </select><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+        <label for="owner">Owner:</label>
+        <select id="owner" name="owner" required>
+            {% for owner in owners %}
+            <option value="{{ owner.name }}">{{ owner.name }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="breed">Breed (for dogs):</label>
+        <input type="text" id="breed" name="breed"><br><br>
+        <label for="indoor">Indoor (for cats):</label>
+        <input type="checkbox" id="indoor" name="indoor"><br><br>
+        <label for="vaccinated">Vaccinated:</label>
+        <input type="checkbox" id="vaccinated" name="vaccinated"><br><br>
+        <input type="submit" value="Add Pet">
+    </form>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>
